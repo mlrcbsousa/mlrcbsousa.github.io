@@ -19,9 +19,9 @@ It has been quite challenging, one of the multiple choice questions in the Probl
 
 ## Karatsuba Multiplication
 
-So it turns out quite interestingly enough that there's more then one way to multiply 2 integers, beyond the one we learn in school. Mind blowing I know. One such way is this cool sounding [Karatsuba Algorithm](https://en.wikipedia.org/wiki/Karatsuba_algorithm) which was the subject of our first week's programming assignment.
+So it turns out quite interestingly enough that there's more then one way to multiply two integers, beyond the one we learn in school. Mind blowing I know. One such way is this cool sounding [Karatsuba Algorithm](https://en.wikipedia.org/wiki/Karatsuba_algorithm) which was the subject of our first week's programming assignment.
 
-Below I will try going through my thinking to get to my final implementation which accurately calculated the assigned multiplication of 2 integers of 64 digits length.
+Below I will try **going through my thinking** to get to my final implementation which accurately calculated the assigned multiplication of two integers of 64 digits length.
 
 > Here is the link to [the code repository](https://github.com/mlrcbsousa/coursera-algorithms/tree/master/karatsuba) with the final implementation.
 
@@ -31,7 +31,7 @@ In true programmer fashion lets start with the **Pseudocode**, explained nicely 
 
 #### The Steps
 
-For the product of 2 integers `x` and `y` of length `n` that can be represented in the following way:
+For the product of two integers `x` and `y` of length `n` that can be represented in the following way:
 
 - x = 10<sup>n/2</sup> a + b
 - y = 10<sup>n/2</sup> c + d
@@ -52,16 +52,16 @@ So far so good.
 
 The following steps will produce the product:
 
-1. The product of `a` and `c` **(Step 1 - S1)**
-2. The product of `b` and `d` **(S2)**
-3. The product of `(a + b)` and `(c + d)` **(S3)** 
-4. The result of **S1** and **S2** subtracted from **S3** **(S4)**
-5. The result **(Product)** which is the final sum of:\
-              **S1** * 10<sup>n</sup>\
-          +   **S2**\
-          +   **S4** * 10<sup>n/2</sup>
+1. The **product** of `a` and `c` - _(Step 1 - S1)_
+2. The **product** of `b` and `d` - _(S2)_
+3. The **product** of `(a + b)` and `(c + d)` - _(S3)_ 
+4. The **result** of _S1_ and _S2_ subtracted from _S3_ - _(S4)_
+5. The result _(Product)_ which is the final **sum** of:
+    - _S1_ * 10<sup>n</sup>
+    - _S2_
+    - _S4_ * 10<sup>n/2</sup>
 
-I know it's seems crazy, like pulled out of nowhere, but I encourage you to go find out why it works, it actually makes some sense once you see the proof.
+I know it's seems crazy, like pulled out of nowhere, but I encourage you to go find out why it works, it actually makes **some** sense once you see the proof.
 
 So in our example case above this would come down to:
 ```
@@ -76,7 +76,7 @@ So in our example case above this would come down to:
 = 7006652
 ```
 
-And indeed if you plug `1234` and `5678` in a calculator you get the answer of `7006652` for their product. Pretty cool huh, of course the fact that it works for this 4 digit number pair doesn't mean it works for all integers of any length, this is just an illustrative example not the proof.
+And indeed if you plug `1234` and `5678` in a calculator you get the answer of `7006652` for their product. Pretty cool huh, of course the fact that it works for this 4 digit number pair doesn't mean it works for all integers of any length, this is just an **illustrative example** not the proof.
 
 #### Setup
 
@@ -104,17 +104,17 @@ RSpec.describe self.class do
 end
 ```
 
-I like to use the helpers in [RSpec](https://rspec.info/), things like the `subject` and `let` blocks and the `described_class` method. Since the implementation method is defined on the `main` **Object** class session above it I used the `self.class` at the top, but otherwise nothing fancy just a regular spec.
+I like to use the helpers in [RSpec](https://rspec.info/), things like the `subject` and `let` blocks and the `described_class` method. Since the implementation method is defined on the `main` **Object** class session above it I used the `self.class` as the first argument to the first describe block, but otherwise nothing fancy just a regular spec.
 
 #### First Implementation
 
-So to start me off on the actual implementation I decided to code up the steps for one loop, so going through them once without taking **recursion** into consideration. This naively made me think of some assumptions we would have to make, however they quickly become obsolete once I got to the recursion part.
+So to start me off on the actual implementation I decided to code up the steps for one loop, so going through them once without taking **recursion** into consideration. This naively made me think of some assumptions I would have to make, however they quickly become obsolete once I got to the recursion part.
 
 > **Naive Assumptions**
 > - both `x` and `y` have the same length `n`  
 > - the length `n` is a power of 2         
 
-The second assumption would allow me to assume the length to always be divisible by 2. Ironically this thinking would become once again useful towards the end of this exercise, after briefly assuming it to be wrong.
+The second assumption would allow me to assume the length to always be divisible by 2. **Ironically** this thinking would become once again useful towards the end of this exercise, after briefly assuming it to be wrong.
 
 So here was roughly my code for the one loop going through each of the algorithm steps described above.
 
