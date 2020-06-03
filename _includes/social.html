@@ -1,0 +1,13 @@
+{%- assign social = site.social -%}
+
+<ul class="social-media-list">
+    <li><a rel="me" href="https://github.com/{{ social.github }}" title="{{ social.github }}">
+        <svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>{{ social.github }}
+    </a></li>
+    <li><a rel="me" href="https://www.linkedin.com/in/{{ social.linkedin }}" title="{{ social.linkedin }}">
+        <svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg>{{ social.linkedin }}
+    </a></li>
+    <li><a rel="me" href="https://twitter.com/{{ social.twitter }}" title="{{ social.twitter }}">
+        <svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use></svg>{{ social.twitter }}
+    </a></li>
+</ul>

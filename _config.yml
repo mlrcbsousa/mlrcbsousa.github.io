@@ -1,35 +1,41 @@
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
 title: Web Chef, Customary Coder.
 email: mlrcbsousa@gmail.com
+handle: mlrcbsousa
 description: >-
   Award winning Maths student turned Economist turned
   Chef turned Software Engineer. Always learning. I enjoy writing clean clear code
   and building things people want to use.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.mlrcbsousa.com"
+google_analytics: UA-129352462-1
+
+# Layout
+header_pages:
+  - resume.md
+  - portfolio.markdown
+  - blog.html
+
+# Author
+author:
+  name: Manuel Sousa
+  email: mlrcbsousa@gmail.com
 
 # Comments
 disqus:
   shortname: mlrcbsousa
 
 # Social
-github_username:  mlrcbsousa
-linkedin_username: mlrcbsousa
-instagram_username: mlrcbsousa
+social:
+  github:  mlrcbsousa
+  linkedin: mlrcbsousa
+  twitter: mlrcbsousa
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
 
+# Defaults
 defaults:
   - scope:
       path: ""

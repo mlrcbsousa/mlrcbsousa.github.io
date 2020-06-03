@@ -1,6 +1,10 @@
 ---
 title:  "The Karatsuba Multiplication Algorithm"
 date:   2020-05-19 00:16:21 +0200
+excerpt: >-
+    So it turns out quite interestingly enough that there’s more then one way to multiply two integers, 
+    beyond the one we learn in school. Mind blowing I know. One such way is this cool sounding Karatsuba 
+    Algorithm which was the subject of our first week’s programming assignment.
 categories: algorithms ruby
 ---
 
