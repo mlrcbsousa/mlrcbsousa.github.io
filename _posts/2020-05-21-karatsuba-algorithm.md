@@ -1,12 +1,7 @@
 ---
-layout: post
 title:  "The Karatsuba Multiplication Algorithm"
 date:   2020-05-19 00:16:21 +0200
 categories: algorithms ruby
-permalink: /:title/
-comments: true
-disqus:
-  shortname: mlrcbsousa
 ---
 
 Recently I have become more and more curious about **thinking like a computer scientist**. Thinking about things in high level concepts and patterns allows to grasp the birds eye view of a problem and apply the same reasoning to a wide variety of circumstances. 

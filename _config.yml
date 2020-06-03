@@ -11,12 +11,16 @@ title: Web Chef, Customary Coder.
 email: mlrcbsousa@gmail.com
 description: >-
   Award winning Maths student turned Economist turned
-  Chef turned Software Engineer. Always learning. I enjoy helping businesses with their
-  online presence with catered web development consulting services.
+  Chef turned Software Engineer. Always learning. I enjoy writing clean clear code
+  and building things people want to use.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.mlrcbsousa.com"
+
+# Comments
 disqus:
   shortname: mlrcbsousa
+
+# Social
 github_username:  mlrcbsousa
 linkedin_username: mlrcbsousa
 instagram_username: mlrcbsousa
@@ -25,6 +29,15 @@ instagram_username: mlrcbsousa
 theme: minima
 plugins:
   - jekyll-feed
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /:title/
+      comments: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.

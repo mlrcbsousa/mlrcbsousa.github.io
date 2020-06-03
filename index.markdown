@@ -6,8 +6,6 @@ layout: home
 title: Home
 ---
 
-## some content heavy epic
+## index home content
 
-some content hjgf
-
-heavy epic
+content in the index page
