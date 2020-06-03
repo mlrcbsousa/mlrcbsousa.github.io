@@ -15,8 +15,11 @@ description: >-
   online presence with catered web development consulting services.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.mlrcbsousa.com"
-twitter_username: mlrcbsousa
+disqus:
+  shortname: mlrcbsousa
 github_username:  mlrcbsousa
+linkedin_username: mlrcbsousa
+instagram_username: mlrcbsousa
 
 # Build settings
 theme: minima
