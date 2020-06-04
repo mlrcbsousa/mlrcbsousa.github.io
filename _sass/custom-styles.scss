@@ -1,3 +1,10 @@
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", sans-serif;
+}
+
 
 // Header nav links
 .active__link{
@@ -5,8 +12,126 @@
   border-bottom: 3px solid #f1f1f1;
 
   @include media-query($on-palm) {
+    font-weight: normal;
+    border-bottom: none;
   }
 }
+
+
+/**
+ * Landing page
+ */
+
+.logo {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  img {
+    max-width: 150%;
+    width: 350px;
+    box-shadow: 0px 3px 15px 3px rgba(0,0,0,0.1);
+  }
+}
+
+.landing-links {
+  width: 300px;
+  position: absolute;
+  left: 50%;
+  bottom: 27%;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+  @include relative-font-size(1.125);
+  letter-spacing: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  @include media-query($on-palm) {
+    bottom: 25%;
+  }
+
+  a {
+    color: $grey-color;
+    padding-bottom: 2px;
+    text-decoration: none;
+    border-bottom: 1.5px solid transparent;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.2s;
+
+    &:hover {
+      color: $grey-color-dark;
+      border-bottom: 1.5px solid $grey-color-dark;
+    }
+  }
+}
+
+.landing-link {
+  color: $text-color;
+  line-height: $base-line-height;
+
+  // Gaps between nav items, but not on the last one
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.social-icons {
+  width: 200px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+  font-size: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  > a {
+    color: $grey-color-lighter;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.2s;
+
+    &:hover {
+      color: $grey-color-dark;
+    }
+  }
+}
+
 
 /**
  * Pagination navbar
