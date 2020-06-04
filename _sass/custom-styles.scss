@@ -1,6 +1,11 @@
+
+// Header nav links
 .active__link{
   font-weight: bold;
   border-bottom: 3px solid #f1f1f1;
+
+  @include media-query($on-palm) {
+  }
 }
 
 /**

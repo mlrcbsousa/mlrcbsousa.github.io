@@ -1,0 +1,118 @@
+---
+layout: base
+---
+
+<style type="text/css" media="screen">
+    .logo {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        color: white;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .logo img {
+        width: 350px;
+        /*border:1px solid #828282;*/
+        box-shadow: 0px 3px 15px 3px rgba(0,0,0,0.1);
+    }
+
+    .email-contact {
+        width: 300px;
+        position: absolute;
+        left: 50%;
+        bottom: 25%;
+        -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+        transform: translate(-50%);
+        font-family: 'Cutive Mono', monospace;
+        font-size: 18px;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    .email-contact a, .email-contact a:hover {
+        color: #828282;
+        border-bottom: 1px solid #828282;
+        padding-bottom: 2px;
+        text-decoration: none;
+    }
+
+    .social-icons {
+        width: 200px;
+        height: 30px;
+        position: absolute;
+        left: 50%;
+        bottom: 15%;
+        -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+        transform: translate(-50%);
+        /*font-size: 25px;*/
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .social-icons > a > svg {
+        fill: #828282;
+        /*width: 26px;*/
+        /*height: 26px;*/
+    }
+
+    .social-icons > a:hover > svg {
+        fill: #000;
+
+    }
+
+
+    /*.svg-icon {*/
+    /*    width: 16px;*/
+    /*    height: 16px;*/
+    /*    display: inline-block;*/
+    /*    fill: #828282;*/
+    /*    padding-right: 5px;*/
+    /*    vertical-align: text-top;*/
+    /*}*/
+</style>
+
+<div class="logo">
+    <img src="/images/logo/main.svg" alt="{{ site.handle }}">
+</div>
+<div class="email-contact">
+    <a href="mailto:{{ site.email }}">
+        {{ site.email }}
+    </a>
+</div>
+
+{%- assign social = site.social -%}
+<div class="social-icons">
+    <a rel="me" href="https://github.com/{{ social.github }}" title="{{ social.github }}">
+        <svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
+    </a>
+    <a rel="me" href="https://www.linkedin.com/in/{{ social.linkedin }}" title="{{ social.linkedin }}">
+        <svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg>
+    </a>
+    <a rel="me" href="https://twitter.com/{{ social.twitter }}" title="{{ social.twitter }}">
+        <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use></svg>
+    </a>
+</div>
