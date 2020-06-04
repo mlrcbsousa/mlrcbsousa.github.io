@@ -9,7 +9,19 @@
 
         {%- if titles_size > 0 -%}
         <nav class="site-nav">
+            <div class="trigger">
+                {%- for path in site.header_pages -%}
+                    {%- assign _page = site.pages | where: "path", path | first -%}
+                    {%- if _page.title -%}
+                        <a  class="page-link {% if page.url contains _page.url %}active__link{% endif %}"
+                            href="{{ _page.url | relative_url }}">
+                            {{ _page.title | escape }}
+                        </a>
+                    {%- endif -%}
+                {%- endfor -%}
+            </div>
             <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+
             <label for="nav-trigger">
               <span class="menu-icon">
                 <svg viewBox="0 0 18 15" width="18px" height="15px">
@@ -17,15 +29,6 @@
                 </svg>
               </span>
             </label>
-
-            <div class="trigger">
-                {%- for path in site.header_pages -%}
-                    {%- assign my_page = site.pages | where: "path", path | first -%}
-                    {%- if my_page.title -%}
-                        <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-                    {%- endif -%}
-                {%- endfor -%}
-            </div>
         </nav>
         {%- endif -%}
 

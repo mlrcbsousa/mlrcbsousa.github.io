@@ -1,0 +1,21 @@
+//---
+$grey-color:           #828282 !default;
+$grey-color-light:     lighten($grey-color, 40%) !default;
+$grey-color-dark:      darken($grey-color, 25%) !default;
+
+$code-background-color: #eeeeff !default;
+
+$link-base-color:       #2a7ae2 !default;
+$link-visited-color:    darken($link-base-color, 15%) !default;
+$link-hover-color:      $text-color !default;
+
+$border-color-01:       $grey-color-light !default;
+$border-color-02:       lighten($grey-color, 35%) !default;
+$border-color-03:       $grey-color-dark !default;
+
+$table-text-color:      lighten($text-color, 18%) !default;
+$table-zebra-color:     lighten($grey-color, 46%) !default;
+$table-header-bg-color: lighten($grey-color, 43%) !default;
+$table-header-border:   lighten($grey-color, 37%) !default;
+$table-border-color:    $border-color-01 !default;
+//---

@@ -1,0 +1,11 @@
+- stack:
+    - jekyll
+  url: https://www.fcbsousa.com
+  github: https://github.com/mlrcbsousa/fcbsousa
+  gif: animation-gif
+- stack:
+    - jekyll
+    - node
+  url: https://www.fcbsousa.com
+  github: https://github.com/mlrcbsousa/fcbsousa
+  gif: animation-gif

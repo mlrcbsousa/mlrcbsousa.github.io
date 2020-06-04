@@ -13,7 +13,9 @@ google_analytics: UA-129352462-1
 header_pages:
   - resume.md
   - portfolio.markdown
-  - blog.html
+  - blog/index.html
+paginate: 5
+paginate_path: "/blog/:num/"
 
 # Author
 author:
@@ -39,11 +41,22 @@ plugins:
 defaults:
   - scope:
       path: ""
+      type: pages
+    values:
+      layout: default
+  - scope:
+      path: ""
       type: posts
     values:
       layout: post
       permalink: /:title/
       comments: true
+  - scope:
+      path: "images"
+    values:
+      image: true
+#      type: images
+#        permalink: /:title/
 
 # Exclude from processing.
 # The following items will not be processed, by default.

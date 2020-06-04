@@ -1,0 +1,31 @@
+.active__link{
+  font-weight: bold;
+  border-bottom: 3px solid #f1f1f1;
+}
+
+/**
+ * Pagination navbar
+ */
+.pagination {
+  margin-bottom: $spacing-unit;
+  @extend .social-media-list;
+  li {
+    display: inline;
+
+    a, div {
+      min-width: 41px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    div {
+      display: inline-block;
+      padding: $spacing-unit / 4;
+      border: 1px solid transparent;
+
+      &.pager-edge {
+        color: $border-color-01;
+        border: 1px dashed;
+      }
+    }
+  }
+}
