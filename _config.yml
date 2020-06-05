@@ -5,13 +5,13 @@ description: >-
   Award winning Maths student turned Economist turned
   Chef turned Software Engineer. Always learning. I enjoy writing clean clear code
   and building things people want to use.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: ""
 url: "https://www.mlrcbsousa.com"
 google_analytics: UA-129352462-1
 
 # Layout
 header_pages:
-  - resume.md
+  - resume.html
   - blog/index.html
   - projects.markdown
 paginate: 5
@@ -55,8 +55,6 @@ defaults:
       path: "images"
     values:
       image: true
-#      type: images
-#        permalink: /:title/
 
 # Exclude from processing.
 # The following items will not be processed, by default.

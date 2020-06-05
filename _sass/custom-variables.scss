@@ -7,8 +7,7 @@ $grey-color-dark:      darken($grey-color, 25%) !default;
 
 $code-background-color: #eeeeff !default;
 
-$brand-color:           #566383 !default;
-$link-base-color:       #566383 !default;
+$link-base-color:       $brand-color !default;
 $link-visited-color:    darken($link-base-color, 15%) !default;
 $link-hover-color:      $text-color !default;
 

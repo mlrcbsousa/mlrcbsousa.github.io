@@ -1,0 +1,74 @@
+/**
+ * Resume Tabs
+ */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+
+  input, label, div, p {
+    box-sizing: border-box;
+  }
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+
+  &:focus + .label {
+    //box-shadow: inset 0px 0px 0px 3px #2aa1c0; // #4DA2C0
+    z-index: 1;
+  }
+
+  &:checked + .label {
+    color: darken($brand-color, 15%);
+    font-weight: bold;
+
+    + .panel {
+      display: block;
+    }
+  }
+}
+
+.label {
+  width: auto;
+  padding: 10px ($spacing-unit / 2);
+  cursor: pointer;
+
+  &:nth-child(2) {
+    padding-left: $spacing-unit;
+  }
+
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.2s;
+
+  // Hover bold that doesn't move the word
+  display: inline-block;
+  text-align: center;
+
+  @include relative-font-size(1.125);
+  color: $brand-color;
+
+  @include media-query($on-palm) {
+  }
+
+  &:hover {
+    color: darken($brand-color, 15%);
+  }
+
+  &::before {
+    display: block;
+    content: attr(data-text); // Add a data-text attribute to the <label>
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
+
+.panel {
+  display: none;
+  padding: ($spacing-unit/3) $spacing-unit;
+  order: 99;
+}
