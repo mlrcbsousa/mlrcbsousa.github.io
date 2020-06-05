@@ -41,6 +41,11 @@ p, span, a, label {
       visibility: hidden;
     }
 
+    @include media-query($on-palm) {
+      display: block;
+      text-align: right;
+    }
+
     &.active__link{
       color: $grey-color-dark;
 

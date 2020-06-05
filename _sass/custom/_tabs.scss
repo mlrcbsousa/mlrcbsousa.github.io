@@ -1,7 +1,7 @@
 /**
  * Resume Tabs
  */
-.tabs {
+.resume-tabs {
   display: flex;
   flex-wrap: wrap;
 
@@ -14,28 +14,37 @@
   position: absolute;
   opacity: 0;
 
-  &:focus + .label {
-    //box-shadow: inset 0px 0px 0px 3px #2aa1c0; // #4DA2C0
+  &:focus + .resume-label {
+    // #2aa1c0; // #4DA2C0
     z-index: 1;
   }
 
-  &:checked + .label {
+  &:checked + .resume-label {
     color: darken($brand-color, 15%);
     font-weight: bold;
 
-    + .panel {
+    + .resume-panel {
       display: block;
+      width: 100%;
     }
   }
 }
 
-.label {
+.resume-label {
   width: auto;
-  padding: 10px ($spacing-unit / 2);
+  padding: ($spacing-unit/3) ($spacing-unit/2);
   cursor: pointer;
 
   &:nth-child(2) {
-    padding-left: $spacing-unit;
+    padding-left: ($spacing-unit/3);
+
+    //@include media-query($on-palm) {
+    //  padding-left: ($spacing-unit/3);
+    //}
+  }
+
+  @include media-query($on-palm) {
+    padding: 0px ($spacing-unit/5);
   }
 
   transition-property: all;
@@ -49,9 +58,6 @@
 
   @include relative-font-size(1.125);
   color: $brand-color;
-
-  @include media-query($on-palm) {
-  }
 
   &:hover {
     color: darken($brand-color, 15%);
@@ -67,8 +73,12 @@
   }
 }
 
-.panel {
+.resume-panel {
   display: none;
-  padding: ($spacing-unit/3) $spacing-unit;
+  padding: ($spacing-unit/3) 0 0 0;
   order: 99;
+
+  @include media-query($on-palm) {
+    padding: ($spacing-unit/3);
+  }
 }

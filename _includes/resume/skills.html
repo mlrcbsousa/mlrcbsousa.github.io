@@ -1,0 +1,23 @@
+<div class="footer-col-wrapper">
+
+    {%- assign skills = site.data.skills -%}
+    {%- assign col_size = site.skills_column_size -%}
+    {%- assign skills_size = skills.size -%}
+    {%- assign skills_cols = skills_size | divided_by: col_size -%}
+
+    {%- if skills_size | modulo: col_size != 0 -%}
+        {%- assign skills_cols = skills_cols | plus: 1 -%}
+    {%- endif -%}
+
+    {% for i in (1..skills_cols) %}
+        <div class="footer-col footer-col-1">
+            <ul class="contact-list">
+                {%- assign offset = i | minus: 1 | times: col_size -%}
+                {%- for skill in skills offset:offset limit:col_size -%}
+                    <li>{{ skill | escape }}</li>
+                {%- endfor -%}
+            </ul>
+        </div>
+    {% endfor %}
+
+</div>
