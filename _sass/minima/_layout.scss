@@ -2,7 +2,6 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
 
@@ -119,6 +118,16 @@
 .social-media-list {
   list-style: none;
   margin-left: 0;
+
+  li {
+    display: inline;
+  }
+}
+
+.social-media-list {
+  @include relative-font-size(1.56);
+  letter-spacing: 6px;
+  margin-bottom: 0px;
 }
 
 .footer-col-wrapper {
@@ -130,13 +139,13 @@
 
 .footer-col {
   float: left;
-  margin-bottom: $spacing-unit / 2;
   padding-left: $spacing-unit / 2;
 }
 
 .footer-col-1 {
   width: -webkit-calc(35% - (#{$spacing-unit} / 2));
   width:         calc(35% - (#{$spacing-unit} / 2));
+  padding-right: calc(5% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
@@ -145,8 +154,8 @@
 }
 
 .footer-col-3 {
-  width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-  width:         calc(45% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(60% - (#{$spacing-unit} / 2));
+  width:         calc(60% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
