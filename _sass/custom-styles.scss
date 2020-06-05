@@ -15,8 +15,17 @@ p, span, a, label {
 /**
  * Header nav links
  */
-.site-nav {
+.site-title {
+    img {
+      height: 3.5rem;
 
+      @include media-query($on-palm) {
+        height: 3.1rem;
+      }
+    }
+}
+
+.site-nav {
   .page-link {
     color: $grey-color;
     display: inline-block;
@@ -65,5 +74,6 @@ p, span, a, label {
 @import
   "custom/landing-page",
   "custom/pagination",
-  "custom/tabs"
+  "custom/tabs",
+  "custom/not-found"
 ;

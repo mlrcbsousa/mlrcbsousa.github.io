@@ -1,0 +1,45 @@
+/**
+ * 404 page
+ */
+.container-404 {
+  margin: 10px auto;
+  max-width: 600px;
+  text-align: center;
+
+  p {
+    font-size: 20px;
+    opacity: .7;
+
+    @include media-query($on-palm) {
+      padding: $spacing-unit/2;
+    }
+
+    &:nth-child(1) {
+      padding-top: 30px;
+    }
+  }
+}
+
+.banner-404 {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+
+  @include media-query($on-palm) {
+    padding: 75px 0;
+  }
+
+  h1 {
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 8em;
+    font-weight: bold;
+    letter-spacing: 4px;
+    line-height: 1;
+
+    @include media-query($on-palm) {
+      font-size: 6em;
+    }
+  }
+}

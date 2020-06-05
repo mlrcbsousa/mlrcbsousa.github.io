@@ -1,6 +1,10 @@
 ---
 title: Resume
 permalink: /resume/
+tab_names:
+  - experience
+  - skills
+  - education
 ---
 
 <div class="resume-header">
@@ -11,55 +15,19 @@ permalink: /resume/
 </div>
 
 <div class="resume-tabs">
-  <input name="resume-tabs" type="radio" id="resume-tab-1" checked="checked" class="input"/>
-  <label for="resume-tab-1" class="resume-label" data-text="experience">experience</label>
-  <div class="resume-panel">
-    <i class="fas fa-expand-arrows-alt"></i>
-    <i class="fas fa-compress-arrows-alt"></i>
-    <i class="fas fa-expand-alt"></i>
-    <i class="fas fa-compress-alt"></i>
-    <p>The orange</p>
-  </div>
+  {%- assign tab = 1 -%}
 
-  <input name="resume-tabs" type="radio" id="resume-tab-2" class="input"/>
-  <label for="resume-tab-2" class="resume-label" data-text="skills">skills</label>
-  <div class="resume-panel">
-    <p>The tangerine</p>
-    {%- include resume/skills.html -%}
-  </div>
+  {% for tab_name in page.tab_names %}
+    <input name="resume-tabs"
+           {% if tab == 1 %}checked="checked"{% endif %}
+           type="radio"
+           id="resume-tab-{{ tab }}"
+           class="input"/>
+    <label for="resume-tab-{{ tab }}" class="resume-label" data-text="{{ tab_name }}">{{ tab_name }}</label>
+    <div class="resume-panel">
+      {%- include resume/{{ tab_name }}.html -%}
+    </div>
 
-  <input name="resume-tabs" type="radio" id="resume-tab-3" class="input"/>
-  <label for="resume-tab-3" class="resume-label" data-text="education">education</label>
-  <div class="resume-panel">
-    <p>A clementine </p>
-  </div>
+    {%- assign tab = tab | plus: 1 -%}
+  {% endfor %}
 </div>
-
-
-<!--    <div class="tabs">-->
-<!--      <input name="tabs" type="radio" id="tab-1" checked="checked" class="input"/>-->
-<!--      <label for="tab-1" class="label" data-text="experience">experience</label>-->
-<!--      <div class="panel">-->
-<!--        <i class="fas fa-expand-arrows-alt"></i>-->
-<!--        <i class="fas fa-compress-arrows-alt"></i>-->
-<!--        <i class="fas fa-expand-alt"></i>-->
-<!--        <i class="fas fa-compress-alt"></i>-->
-<!--        <p>the all button</p>-->
-<!--        <p>The orange (specifically, the sweet orange) is the fruit of the citrus species Citrus × sinensis in the family Rutaceae</p>-->
-<!--      </div>-->
-
-<!--      <input name="tabs" type="radio" id="tab-2" class="input"/>-->
-<!--      <label for="tab-2" class="label" data-text="skills">skills</label>-->
-<!--      <div class="panel">-->
-<!--        <p>the all button</p>-->
-<!--        <p>The tangerine (Citrus tangerina) is an orange-colored citrus fruit that is closely related to, or possibly a type of, mandarin orange (Citrus reticulata).</p>-->
-<!--        <p>The name was first used for fruit coming from Tangier, Morocco, described as a mandarin variety. Under the Tanaka classification system, Citrus tangerina is considered a separate species.</p>-->
-<!--      </div>-->
-
-<!--      <input name="tabs" type="radio" id="tab-3" class="input"/>-->
-<!--      <label for="tab-3" class="label" data-text="education">education</label>-->
-<!--      <div class="panel">-->
-<!--        <p>the all button</p>-->
-<!--        <p>A clementine (Citrus ×clementina) is a hybrid between a mandarin orange and a sweet orange, so named in 1902. The exterior is a deep orange colour with a smooth, glossy appearance. Clementines can be separated into 7 to 14 segments. Similarly to tangerines, they tend to be easy to peel.</p>-->
-<!--      </div>-->
-<!--    </div>-->
