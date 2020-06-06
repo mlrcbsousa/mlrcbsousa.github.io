@@ -1,0 +1,246 @@
+{
+  "meta": { "theme": "paper" },
+  "basics": {
+    "name": "Manuel Sousa",
+    "label": "Engineer",
+    "picture": "",
+    "email": "mlrcbsousa@gmail.com",
+    "phone": "(32) 473-123-816",
+    "website": "https://www.mlrcbsousa.com",
+    "summary": "Software Engineer who can build web apps from the ground up. Working in the startup environment, used to wearing many hats: backend, frontend, design, architect, lead. Product focused programmer who prioritizes user feedback and fast delivery. Flexible when investigating what's needed for new challenges. Passionate about coding.",
+    "location": {
+      "address": "Av. de la Couronne 77A",
+      "postalCode": "1050 Ixelles",
+      "city": "Brussels",
+      "countryCode": "BE",
+      "region": "Brussels"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "mlrcbsousa",
+        "url": "https://github.com/mlrcbsousa"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "mlrcbsousa",
+        "url": "https://www.linkedin.com/in/mlrcbsousa"
+      },
+      {
+        "network": "Twitter",
+        "username": "mlrcbsousa",
+        "url": "https://twitter.com/mlrcbsousa"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "PaxFamilia",
+      "position": "Lead Software Engineer",
+      "website": "https://www.paxfamilia.com",
+      "startDate": "2020-01-15",
+      "summary": "Promoted to Lead Software Engineer.",
+      "highlights": [
+        "Lead full stack engineer working on product integrations with SaaS providers, XS2A and PSD2 integrations using PaxFamilia's AISP license.",
+        "Executing on legacy and technical debt, using modern Javascript and implementing internal DSLs in Ruby. This was achieved with interface improvements and backend code architecture refactoring.",
+        "Leading and managing a developer team, everything from onboarding and ongoing training, task management and delegation,  close feedback loop and code review.",
+        "Built and maintained full end-to-end test coverage of new features with Jest and Cypress.io implementations, reducing time to market of product improvements.",
+        "Collaborating on improving engineer onboarding. Travelled oversees to workshop a new front end developer's entry into the team.",
+        "Implementing internal Gem for a unique private external bank API."
+      ]
+    },
+    {
+      "company": "Coloc Housing",
+      "position": "Software Engineer",
+      "website": "http://www.colochousing.com",
+      "startDate": "2020-01-01",
+      "endDate": "2020-06-01",
+      "summary": "Coloc Housing is a serviced co-living apartments managing startup focused on high end tenants",
+      "highlights": [
+        "Full stack engineer delivering high visibility and impact features across web platform.",
+        "Experience with Stimulus JS framework as a part of the Ruby On Rails stack.",
+        "Experience with Continuous Development with GitHub Actions and Heroku.",
+        "Implementing Zendesk Integration and end-to-end testing of most important user flows of the business with Capybara.",
+        "Implementing web application redesign and Interactor business logic architecture."
+      ]
+    },
+    {
+      "company": "PaxFamilia",
+      "position": "Software Engineer",
+      "website": "https://www.paxfamilia.com",
+      "startDate": "2019-01-21",
+      "endDate": "2020-01-15",
+      "summary": "PaxFamilia centralizes the family global wealth in one interface that connects the asset holder and his family to the advisors. They use advising tools at their disposal (such as estate planning tools, reporting tools, etc.) to work more efficiently and deliver a better experience to their clients.",
+      "highlights": [
+        "Full stack engineer working on product integrations with big Financial firms, building application test suite and evolving internal architecture and stack from legacy to modern standards.",
+        "Experienced in scoping, architecting, and executing projects independently while coordinating with stakeholders, design, product and QA.",
+        "Oversaw and implemented new JSON Schema API with BNP Paribas Fortis which unlocked 5000+ high income families' data to be uploaded into the app. This included generating documentation and standards compliant design choices.",
+        "Built testing suite with RSpec with the help of self-made generator tools to take total app test coverage from 0% to 40%+. (App with 30k+ lines of code). All new backend developments stuck to the 100% coverage TDD principals.",
+        "Lead development of drag and drop action planning tool in Vue JS. This increased app stickiness and was the first big step in moving from Ruby on Rails to Rails and Vue.",
+        "Lead product evolution from Rails embedded Ruby in HTML with a traditional RESTful rails backend to a Vue JS frontend and Ruby GraphQL backend, fully tested from the ground up. This resulted in more efficient server queries and a powerful interactive user interface.",
+        "Learned and applied fundamentals of fast feedback loops and unit as well as end-to-end testing. Learned how to use GitHub Actions and implemented automatic test running in the cloud.",
+        "Learned and applied clean clear coding principles: modularity, focus on behavior, dependency injection, following the Single Responsibility Principle, Sandi Metz and ThoughtBot. Focus on code rewritability rather then reusability."
+      ]
+    },
+    {
+      "company": "Le Wagon",
+      "position": "Student",
+      "website": "https://www.lewagon.com/",
+      "startDate": "2018-10-01",
+      "endDate": "2018-12-31",
+      "summary": "Le Wagon Bootcamp is a 9 week training program specializing in Ruby, Rails, HTML5, CSS, TDD, ES6 Javascript, Git, Heroku and Agile Development. Followed up with a paid intensive online course on React and Rails. Learned the SPA philosophy, Rails as a pure API.",
+      "highlights": [
+        "Engaged in daily pair programming and agile group projects with tight deadlines.",
+        "Completed all advanced exercises, stayed everyday until the building closed. First to get a job out of the course: had an interview the day after the course ended and landed the job overseas by the end of the week."
+      ]
+    },
+    {
+      "company": "Various Cooking Jobs",
+      "position": "Chef",
+      "startDate": "2014-01-01",
+      "endDate": "2018-05-10",
+      "summary": "Worked in various types of restaurant businesses including: Hotels, Cruises, Pop-ups, Seafood, Italian. Started a catering business that broke up later. Passionate and nerdy about cooking, competitive environment with lots of valuable life lessons learnt.",
+      "highlights": [
+        "Brought in structure and experience to train new team - Lead and trained old staff. Brought in accumulated knowledge with menu development and inventory management",
+        "Overcame challenge of workload, under-staffing and speed.",
+        "Managed, cooked, client-faced, marketed a Pho soup restaurant tripling income vs cost.",
+        "Tested prototypes - executed dinner events - developed competence through research."
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Web Summit",
+      "position": "Lead Volunteer",
+      "startDate": "2017-10-02",
+      "endDate": "2019-10-07",
+      "summary": "Organize and manage small team of WebSummit Volunteers, have attended as volunteer every year since it's move to Lisbon.",
+      "highlights": [
+        "Meeting a student of the Le Wagon bootcamp who told me about it and set me off into the tech world."
+      ]
+    },
+    {
+      "organization": "Vipassanna",
+      "position": "Chef",
+      "startDate": "2018-08-10",
+      "endDate": "2018-08-20",
+      "summary": "Helped as a server in a 10 day Vipassanna meditation course, after having done one as a student. Did another as a student after.",
+      "highlights": [
+        "Experience as professional Chef put me in the position of leading the kitchen."
+      ]
+    },
+    {
+      "organization": "Teaching and Projects Abroad",
+      "position": "English Teacher",
+      "startDate": "2005-01-20",
+      "endDate": "2005-07-20",
+      "summary": "Teaching english to primary school and kinder garden students at a school in WuJiang, near SuZhou in China",
+      "highlights": [
+        "Being very var away on the other side of the planet where no one spoke much english and being completely different to everyone."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Le Wagon Full Stack Web Development Bootcamp",
+      "area": "Web Development",
+      "studyType": "Training",
+      "startDate": "2018-10-01",
+      "endDate": "2018-12-31"
+    },
+    {
+      "institution": "Escola de Hotelaria e Turismo de Lisboa",
+      "area": "Culinary Arts",
+      "studyType": "Professional",
+      "startDate": "2014-09-01",
+      "endDate": "2016-02-01"
+    },
+    {
+      "institution": "Instituto Superior Tecnico",
+      "area": "Computer Science (incomplete)",
+      "studyType": "Bachelor",
+      "startDate": "2009-09-01",
+      "endDate": "2010-05-01"
+    },
+    {
+      "institution": "Faculdade Nova de Economia",
+      "area": "Economics (incomplete)",
+      "studyType": "Bachelor",
+      "startDate": "2006-09-01",
+      "endDate": "2008-05-01"
+    }
+  ],
+  "skills": [
+    {
+      "keywords": [
+        "HTML",
+        "CSS / SCSS",
+        "Javascript / ES6",
+        "Vue",
+        "Jest",
+        "Cypress.io",
+        "Stimulus"
+      ],
+      "level": "Professional",
+      "name": "Frontend"
+    },
+    {
+      "keywords": ["Rails", "Ruby", "GraphQL", "RSpec", "Postgres", "Sidekiq"],
+      "level": "Professional",
+      "name": "Backend"
+    },
+    {
+      "keywords": ["GH Actions", "Ubuntu", "Heroku"],
+      "level": "Professional",
+      "name": "Devops"
+    },
+    {
+      "keywords": ["Team Management", "Employee Training", "Product Design", "Architecture"],
+      "level": "Professional",
+      "name": "Soft Skills"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "Portuguese",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "French",
+      "fluency": "Proficient"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Travelling (visited 21 countries)",
+      "keywords": [
+        "Gastronomy",
+        "Culture",
+        "Architecture"
+      ]
+    },
+    {
+      "name": "Learning",
+      "keywords": [
+        "Algorithms",
+        "C++",
+        "Python",
+        "R",
+        "Elixir",
+        "Meta Programming"
+      ]
+    },
+    {
+      "name": "Cooking",
+      "keywords": [
+        "Baking",
+        "Stocks",
+        "Ratios"
+      ]
+    }
+  ]
+}
