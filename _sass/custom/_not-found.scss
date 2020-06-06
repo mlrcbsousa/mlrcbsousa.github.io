@@ -1,6 +1,10 @@
 /**
  * 404 page
  */
+.page-content-404 {
+  flex: 1;
+}
+
 .container-404 {
   margin: 10px auto;
   max-width: 600px;
@@ -13,12 +17,13 @@
     @include media-query($on-palm) {
       padding: $spacing-unit/2;
     }
-
-    &:nth-child(1) {
-      padding-top: 30px;
-    }
   }
 }
+
+.under-banner {
+  padding: $spacing-unit 0;
+}
+
 
 .banner-404 {
   background-size: cover;
