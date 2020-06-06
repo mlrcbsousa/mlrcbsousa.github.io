@@ -142,30 +142,30 @@
   ],
   "education": [
     {
-      "institution": "Le Wagon Full Stack Web Development Bootcamp",
-      "area": "Web Development",
-      "studyType": "Training",
+      "institution": "Le Wagon Dev Bootcamp",
+      "area": "Full Stack",
+      "studyType": "Web Development",
       "startDate": "2018-10-01",
       "endDate": "2018-12-31"
     },
     {
       "institution": "Escola de Hotelaria e Turismo de Lisboa",
       "area": "Culinary Arts",
-      "studyType": "Professional",
+      "studyType": "Training",
       "startDate": "2014-09-01",
       "endDate": "2016-02-01"
     },
     {
       "institution": "Instituto Superior Tecnico",
-      "area": "Computer Science (incomplete)",
-      "studyType": "Bachelor",
+      "area": "Computer Science",
+      "studyType": "Bachelor (incomplete)",
       "startDate": "2009-09-01",
       "endDate": "2010-05-01"
     },
     {
       "institution": "Faculdade Nova de Economia",
-      "area": "Economics (incomplete)",
-      "studyType": "Bachelor",
+      "area": "Economics",
+      "studyType": "Bachelor (incomplete)",
       "startDate": "2006-09-01",
       "endDate": "2008-05-01"
     }

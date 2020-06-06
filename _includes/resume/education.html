@@ -5,28 +5,43 @@
 
 <div class="vertical-accordion">
     <ul>
-        <li>
-            <input type="checkbox" id="checkbox-1" name="checkbox-accordion" />
-            <label for="checkbox-1"><i class="fas fa-expand-alt"></i>Title&nbsp;One</label>
-            <div class="content">
+        {% assign qualifications = site.data.resume.education %}
+        {% assign item = 1 %}
 
-                <p>- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec posuere lorem. Pellentesque hendrerit, lorem luctus porttitor vestibulum, eros sapien mattis libero, </p>
-                <p>euismod congue neque nisi at ipsum. Mauris semper ipsum sit amet metus semper malesuada. Donec vel est justo, ac porta diam.</p>
-            </div>
-        </li>
-        <li>
-            <input type="checkbox" id="checkbox-2" name="checkbox-accordion" />
-            <label for="checkbox-2"><i class="fas fa-expand-alt"></i>Title&nbsp;Two</label>
-            <div class="content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec posuere lorem. Pellentesque hendrerit, lorem luctus porttitor vestibulum, eros sapien mattis libero, euismod congue neque nisi at ipsum. Mauris semper ipsum sit amet metus semper malesuada. Donec vel est justo, ac porta diam.</p>
-            </div>
-        </li>
-        <li>
-            <input type="checkbox" id="checkbox-3" name="checkbox-accordion" />
-            <label for="checkbox-3"><i class="fas fa-expand-alt"></i>Title&nbsp;Three</label>
-            <div class="content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec posuere lorem. Pellentesque hendrerit, lorem luctus porttitor vestibulum, eros sapien mattis libero, euismod congue neque nisi at ipsum. Mauris semper ipsum sit amet metus semper malesuada. Donec vel est justo, ac porta diam.</p>
-            </div>
-        </li>
+        {% for qualification in qualifications %}
+
+            <!-- Format dates based on Year -->
+            {% assign startYear = qualification.startDate | date: "%Y" %}
+            {% assign endYear = qualification.endDate | date: "%Y" %}
+
+            {% if startYear == endYear %}
+                {% assign date_format = "%b %Y" %}
+            {% else %}
+                {% assign date_format = "%Y" %}
+            {% endif %}
+
+            {% assign startDate = qualification.startDate | date: date_format %}
+            {% assign endDate = qualification.endDate | date: date_format %}
+
+            {% if startYear == endYear %}
+                {% assign dates = startDate | append: " - " | append: endDate %}
+            {% else %}
+                {% assign dates = startDate | append: "-" | append: endDate %}
+            {% endif %}
+
+            <li>
+                <input type="checkbox" id="checkbox-{{ item }}" name="checkbox-accordion" />
+                <label for="checkbox-{{ item }}">
+                    <!-- All the indentation here is on purpose -->
+                    <i class="fas fa-expand-alt"></i>{{ qualification.institution }}
+                    &nbsp;&#183;&nbsp;&nbsp;{{ dates }}
+                </label>
+                <div class="accordion-content">
+                    <p>{{ qualification.area }} {{ qualification.studyType }}</p>
+                </div>
+            </li>
+            {% assign item = item | plus: 1 %}
+        
+        {% endfor %}
     </ul>
 </div>

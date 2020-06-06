@@ -11,7 +11,17 @@
 }
 
 .resume-links {
-  padding: ($spacing-unit*2.5) ($spacing-unit/3) 0;
+  color: $grey-color-lighter;
+  padding: 0 ($spacing-unit/3);
+  margin-top: $spacing-unit * 2.5;
+
+  a {
+    color: $grey-color-light;
+
+    &:hover {
+      color: $grey-color-lighter;
+    }
+  }
 
   a:nth-child(1) > i {
     padding-right: ($spacing-unit/6);
@@ -98,7 +108,10 @@
     padding-right: ($spacing-unit/2);
     color: $grey-color-lighter;
 
-
+    transition-property: color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.1s;
   }
 }
 

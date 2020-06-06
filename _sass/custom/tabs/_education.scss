@@ -4,7 +4,7 @@
 
 .vertical-accordion {
   margin:0 auto;
-  padding-top:5px;
+  padding-top: ($spacing-unit/5);
 
   ul {
     list-style:none;
@@ -47,10 +47,10 @@
     }
   }
 
-  .content {
+  .accordion-content {
     @include relative-font-size(0.9);
     max-height:0;
-    margin: 0 0 0 ($base-font-size + 10px);
+    margin-left: $base-font-size - 1px + ($spacing-unit/2);
     border-top: 3px solid transparent;
     //padding: ($base-font-size/2) 0;
 
@@ -64,8 +64,8 @@
     //color:#FFF;
     //border-bottom:0;
 
-    ~ .content {
-      max-height:300px; // Make this larger then any content might be to get the transition animation
+    ~ .accordion-content {
+      max-height:300px; // Make this larger then any accordion-content might be to get the transition animation
       //border:1px solid #542437;
       border-top: 3px solid $grey-color-light;
       //border-top-color: $grey-color-light;

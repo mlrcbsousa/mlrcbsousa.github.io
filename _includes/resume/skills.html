@@ -1,6 +1,17 @@
 <div class="footer-col-wrapper">
 
-    {%- assign skills = site.data.skills -%}
+    {% assign resume_skills = site.data.resume.skills %}
+    {% assign resume_skills_size = resume_skills.size %}
+
+    {% assign skills = resume_skills[0].keywords %}
+
+    {%- if resume_skills_size > 1 -%}
+        {% assign max = resume_skills_size | minus: 1 %}
+        {% for i in (1..max) %}
+            {% assign skills = skills | concat: resume_skills[i].keywords %}
+        {% endfor %}
+    {%- endif -%}
+
     {%- assign col_size = site.skills_column_size -%}
     {%- assign skills_size = skills.size -%}
     {%- assign skills_cols = skills_size | divided_by: col_size -%}
@@ -14,7 +25,7 @@
             <ul class="contact-list">
                 {%- assign offset = i | minus: 1 | times: col_size -%}
                 {%- for skill in skills offset:offset limit:col_size -%}
-                    <li>{{ skill | escape }}</li>
+                    <li>&#183; {{ skill | escape }}</li>
                 {%- endfor -%}
             </ul>
         </div>

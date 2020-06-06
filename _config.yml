@@ -14,10 +14,14 @@ header_pages:
   - resume.html
   - blog/index.html
   - projects.markdown
+skills_column_size: 12
+
+# Pagination
 paginate: 5
 paginate_path: "/blog/:num/"
 
-skills_column_size: 12
+# Formatting
+date_format: "%b %-d, %Y"
 
 # Author
 author:
