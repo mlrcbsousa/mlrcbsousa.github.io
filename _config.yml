@@ -74,11 +74,11 @@ exclude:
   - README.md
   - resume/README.md
   - images/nice-blues.png
+  - Gemfile
+  - Gemfile.lock
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
 #   - node_modules/
 #   - vendor/bundle/
 #   - vendor/cache/
