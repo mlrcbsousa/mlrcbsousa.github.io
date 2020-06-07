@@ -1,0 +1,5 @@
+{% if include.categories != empty %} •
+    {% for category in include.categories %}
+        <span>{{ category | escape }}</span>{%- if forloop.last == false %},{% endif -%}
+    {% endfor %}
+{% endif %}

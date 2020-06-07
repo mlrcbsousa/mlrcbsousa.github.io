@@ -26,54 +26,62 @@ Below I will try **going through my thinking** to get to my final implementation
 
 ### Pseudocode
 
-In true programmer fashion lets start with the **Pseudocode**, explained nicely in one of the lecture videos. I won't be going through the proof for the algorithm or why the algorithm is more efficient then the **"Grade School Algorithm"** we are taught in school. Suffice to say that the grade school algorithm has a time complexity of _&Omicron;(n<sup>2</sup>)_ whilst the faster Karatsuba algorithm has a time complexity of _&Omicron;(n<sup>log 3</sup>)_.
+In true programmer fashion lets start with the **Pseudocode**, explained nicely in one of the lecture videos. I won't be going through the proof for the algorithm or why the algorithm is more efficient then the **"Grade School Algorithm"** we are taught in school. Suffice to say that the grade school algorithm has a time complexity of \\( O(n^2) \\) whilst the faster Karatsuba algorithm has a time complexity of \\( O(n^{\log_2 3}) \\).
 
 #### The Steps
 
 For the product of two integers `x` and `y` of length `n` that can be represented in the following way:
 
-- x = 10<sup>n/2</sup> a + b
-- y = 10<sup>n/2</sup> c + d
+- \\( x=10^{\frac{n}{2}}a+b \\)
+- \\( y=10^{\frac{n}{2}}c+d \\)
 
 So for example if:
-```
-x = 1234
-y = 5678
-```
+
+\\begin{align}
+x=1234\\\
+y=5678
+\\end{align}
+
 Then our four letters would represent
-```
-a = 12
-b = 34
-c = 56
+
+\\begin{align}
+a = 12\\\
+b = 34\\\
+c = 56\\\
 d = 78
-```
+\\end{align}
+
 So far so good.
 
 The following steps will produce the product:
 
-1. The **product** of `a` and `c` - _(Step 1 - S1)_
-2. The **product** of `b` and `d` - _(S2)_
-3. The **product** of `(a + b)` and `(c + d)` - _(S3)_ 
-4. The **result** of _S1_ and _S2_ subtracted from _S3_ - _(S4)_
+1. The **product** of `a` and `c` - \\((Step\ 1 - S_1)\\)
+2. The **product** of `b` and `d` - \\((S_2)\\)
+3. The **product** of `(a + b)` and `(c + d)` - \\((S_3)\\)
+4. The **result** of \\(S_1\\) and \\(S_2\\) subtracted from \\(S_3\\) - \\((S_4)\\)
 5. The result _(Product)_ which is the final **sum** of:
-    - _S1_ * 10<sup>n</sup>
-    - _S2_
-    - _S4_ * 10<sup>n/2</sup>
 
-I know it's seems crazy, like pulled out of nowhere, but I encourage you to go find out why it works, it actually makes **some** sense once you see the proof.
+\\begin{align}
+&S_1 \times 10^n\\\
++\ &S_2\\\
++\ &S_4 \times 10^{\frac{n}{2}}\\\
+\\end{align}
+
+I know it seems crazy, like pulled out of nowhere, but I encourage you to go find out why it works, it actually makes **some** sense once you see the proof.
 
 So in our example case above this would come down to:
-```
-12 * 56                 = 672
-34 * 78                 = 2652
-(12 + 34) * (56 + 78)   = 6164
-6164 - 672 - 2652       = 2840
 
-  6720000  
-+    2652
-+  284000   
-= 7006652
-```
+\\begin{align}
+12\times 56&=672\\\
+34\times 78&=2852\\\
+(12+34)\times (56+78)&=6164\\\
+6164-672-2652&=2840\\\
+\\\
+6720000&\\\
++\ 2652&\\\
++\ 284000&\\\
+=7006652&
+\\end{align}
 
 And indeed if you plug `1234` and `5678` in a calculator you get the answer of `7006652` for their product. Pretty cool huh, of course the fact that it works for this 4 digit number pair doesn't mean it works for all integers of any length, this is just an **illustrative example** not the proof.
 
@@ -296,25 +304,7 @@ This was better, my home baked test cases were passing. I thought I was almost h
 Browsing and opening some of these text files was somewhat surprising and intimidating, some of these numbers were huge, even **bigger** then the assignment challenge of two **64 digit** inputs!
 
 I used the following code snippet to load them up after cloning the repo:
-```ruby
-context 'from course files' do
-  filepaths = Dir['../stanford-algs/testCases/course1/assignment1Multiplication/input*.txt']
-
-  filepaths.each do |filepath|
-    output_filepath = filepath.gsub('input', 'output')
-
-    x, y    = File.read(filepath).split("\n")
-    product = File.read(output_filepath)
-
-    context "#{x} and #{y}" do
-      let(:x) { x.to_i }
-      let(:y) { y.to_i }
-
-      it { is_expected.to eq(product.to_i) }
-    end
-  end
-end
-```
+{% gist 15a6f8ed1d53410e6a493224cda0e492 %}
 
 After some debugging to get to the version above.. 
 

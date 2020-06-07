@@ -242,6 +242,7 @@
 
 .post-title {
   @include relative-font-size(2.625);
+  color: $brand-color;
   letter-spacing: -1px;
   line-height: 1;
 

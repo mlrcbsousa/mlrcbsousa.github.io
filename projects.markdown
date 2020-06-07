@@ -12,3 +12,4 @@ permalink: /projects/
 
 {% endif %}
 
+{{ page.post }}
