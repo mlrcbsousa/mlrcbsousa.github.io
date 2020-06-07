@@ -27,9 +27,9 @@ function OnToggleExpandAll ({ target }) {
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    const items = document.querySelectorAll('.vertical-accordion input');
+    const items = document.querySelectorAll(".vertical-accordion input");
     items.forEach(el => el.addEventListener("change", OnToggleExpand));
 
-    const allButtons = document.querySelectorAll('.fa-expand-arrows-alt');
+    const allButtons = document.querySelectorAll(".fa-expand-arrows-alt");
     allButtons.forEach(el => el.addEventListener("click", OnToggleExpandAll));
 });
