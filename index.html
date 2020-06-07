@@ -2,7 +2,7 @@
 layout: base
 ---
 
-<div class="logo">
+<div class="landing-logo">
     <img src="/images/logo/main.svg" alt="{{ site.handle }}">
 </div>
 
@@ -14,17 +14,17 @@ layout: base
 </div>
 
 {%- assign social = site.social -%}
-<div class="social-icons">
+<div class="landing-icons">
     <a href="mailto:{{ site.email }}">
-        <i class="fas fa-envelope"></i>
+        <i class="fa fa-envelope"></i>
     </a>
     <a rel="me" href="https://github.com/{{ social.github }}" title="GitHub">
-        <i class="fab fa-github"></i>
+        <i class="fa fa-github"></i>
     </a>
     <a rel="me" href="https://www.linkedin.com/in/{{ social.linkedin }}" title="LinkedIn">
-        <i class="fab fa-linkedin"></i>
+        <i class="fa fa-linkedin-square"></i>
     </a>
     <a rel="me" href="https://twitter.com/{{ social.twitter }}" title="Twitter">
-        <i class="fab fa-twitter"></i>
+        <i class="fa fa-twitter"></i>
     </a>
 </div>

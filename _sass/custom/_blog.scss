@@ -3,13 +3,32 @@
  */
 
 .post-list {
-  > li {
-    padding-bottom: 20px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid $grey-color-light;
+  margin-bottom: 0;
+
+  a {
+
+    &:hover {
+      @include transition(color .3s ease-out);
+      transition-delay: 0.2s;
+    }
+
+    p {
+      color: $text-color;
+    }
+
+    li {
+      padding-bottom: 20px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid $grey-color-light;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   h3 {
+    @include relative-font-size(1.5);
     margin-bottom: $spacing-unit / 4;
   }
 }

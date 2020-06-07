@@ -31,12 +31,9 @@ p, span, a, label {
     display: inline-block;
     text-align: center;
 
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0.2s;
-
     &:hover {
+      @include transition(all .3s ease-out);
+      transition-delay: 0.2s;
       color: $grey-color-dark;
     }
 
@@ -68,8 +65,6 @@ p, span, a, label {
     }
   }
 }
-
-
 
 @import
   "custom/landing-page",

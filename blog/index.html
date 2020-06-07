@@ -10,37 +10,35 @@ title: Blog
     <ul class="post-list">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {%- for post in posts -%}
-        <li>
-            <span class="post-meta">{{ post.date | date: date_format }}</span>
-            <h3>
-                <a class="post-link" href="{{ post.url | relative_url }}">
-                    {{ post.title | escape }}
-                </a>
-            </h3>
-            <p>
-                {{ post.content | strip_html | truncatewords: 30 }}
-            </p>
-        </li>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+                <li>
+                    <span class="post-meta">{{ post.date | date: date_format }}</span>
+                    <h3>
+                        {{ post.title | escape }}
+                    </h3>
+                    <p>
+                        {{ post.content | strip_html | truncatewords: 30 }}
+                    </p>
+                </li>
+            </a>
         {%- endfor -%}
     </ul>
 
     {% if site.paginate %}
-    <div class="pager">
-        <ul class="pagination">
-            {%- if paginator.previous_page %}
-            <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
-            {%- else %}
-            <li><div class="pager-edge">•</div></li>
-            {%- endif %}
+    <div class="pagination">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="arrow">&#10229;</a>
+        {% else %}
+        <span class="arrow"></span>
+        {% endif %}
 
-            <li><div class="current-page">{{ paginator.page }}</div></li>
+        <span>{{ paginator.page }}</span>
 
-            {%- if paginator.next_page %}
-            <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-            {%- else %}
-            <li><div class="pager-edge">•</div></li>
-            {%- endif %}
-        </ul>
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="arrow">&#10230;</a>
+        {% else %}
+        <span class="arrow"></span>
+        {% endif %}
     </div>
     {%- endif %}
 
