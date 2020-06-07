@@ -25,8 +25,14 @@ tab_names:
   {% endfor %}
 </div>
 
+
 <div class="resume-links">
-  <a href="#" title="Download"><i class="fas fa-file-download"></i></a>
+  {%- assign updated = '2020-06-05' -%}
+
+  <a href="/resume/paper.pdf"
+     title="Download"
+     download="manuel-sousa-resume-{{ updated }}"
+  ><i class="fas fa-file-download"></i></a>
   <a href="/resume/paper.html" title="Resume"><i class="fas fa-file-export"></i></a>
-  Last updated {{ '2020-06-05' | date: site.date_format }}
+  Last updated {{ updated | date: site.date_format }}
 </div>

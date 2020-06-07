@@ -4,3 +4,6 @@
 - GH Pages
 - Liquid
 - SCSS
+- [JSON Resume](https://jsonresume.org/)
+
+Resume page heavily inspired by https://github.com/adnamalin/adnamalin.

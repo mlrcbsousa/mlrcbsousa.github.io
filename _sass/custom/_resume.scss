@@ -118,8 +118,12 @@
 .all-button {
   color: $grey-color;
 
-  i:hover {
-    color: $grey-color;
+  i {
+    cursor: pointer;
+
+    &:hover {
+      color: $grey-color;
+    }
   }
 }
 
