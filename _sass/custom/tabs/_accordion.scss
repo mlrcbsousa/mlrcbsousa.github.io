@@ -35,8 +35,18 @@
 
     label {
 
-      i {
+      @include media-query($on-palm) {
+        span  {
+          line-height: 1.25;
+        }
+      }
 
+      i {
+        line-height: 1.5;
+
+        @include media-query($on-palm) {
+          line-height: 1.25;
+        }
       }
 
       &:hover {
@@ -47,12 +57,42 @@
     }
   }
 
+  .checkbox-label-content {
+    display: flex;
+  }
+
+  .experience-dates {
+    @include relative-font-size(0.875);
+    line-height: 1;
+
+    @include media-query($on-palm) {
+      line-height: 1.5;
+      margin-bottom: 0px;
+    }
+  }
+
+  .education-border-end {
+    flex: auto;
+    position: relative;
+
+    @include media-query($on-palm) {
+      display: none;
+    }
+
+    div {
+      height: $spacing-unit/3;
+      width: 100%;
+      background: $background-color;
+      position: absolute;
+      top: 95%;
+    }
+  }
+
   .accordion-content {
-    @include relative-font-size(0.9);
+    @include relative-font-size(0.875);
     max-height:0;
     margin-left: $base-font-size - 1px + ($spacing-unit/2);
     border-top: 3px solid transparent;
-    //padding: ($base-font-size/2) 0;
 
     overflow:hidden;
     -webkit-transition: all .5s ease-out;
@@ -61,14 +101,10 @@
 
   [type=checkbox]:checked ~ label {
     padding: ($base-font-size/4) 0;
-    //color:#FFF;
-    //border-bottom:0;
 
     ~ .accordion-content {
-      max-height:300px; // Make this larger then any accordion-content might be to get the transition animation
-      //border:1px solid #542437;
+      max-height:1300px; // Make this larger then any accordion-content might be to get the transition animation (remember palm)
       border-top: 3px solid $grey-color-light;
-      //border-top-color: $grey-color-light;
       padding: ($base-font-size/2 - 3px) 0; // Minus size of border
     }
   }

@@ -71,6 +71,7 @@ defaults:
 # their entries' file path in the `include:` list.
 #
 exclude:
+  - README.md
   - resume/README.md
   - images/nice-blues.png
 #   - .sass-cache/

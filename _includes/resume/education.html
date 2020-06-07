@@ -30,18 +30,21 @@
             {% endif %}
 
             <li>
-                <input type="checkbox" id="checkbox-{{ item }}" name="checkbox-accordion" />
-                <label for="checkbox-{{ item }}">
-                    <!-- All the indentation here is on purpose -->
-                    <i class="fas fa-expand-alt"></i>{{ qualification.institution }}
-                    &nbsp;&#183;&nbsp;&nbsp;{{ dates }}
+                <input type="checkbox" id="education-checkbox-{{ item }}" name="education-checkbox-accordion" />
+                <label for="education-checkbox-{{ item }}">
+                    <div class="checkbox-label-content">
+                        <i class="fas fa-expand-alt"></i>
+                        <span>{{ qualification.institution }}&nbsp;&nbsp;&#183;&nbsp;&nbsp;{{ dates }}</span>
+                        <!-- Inside div on purpose -->
+                        <div class="education-border-end"><div></div></div>
+                    </div>
                 </label>
                 <div class="accordion-content">
                     <p>{{ qualification.area }} {{ qualification.studyType }}</p>
                 </div>
             </li>
             {% assign item = item | plus: 1 %}
-        
+
         {% endfor %}
     </ul>
 </div>

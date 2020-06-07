@@ -1,9 +1,46 @@
 
-<p>
-    <i class="fas fa-expand-arrows-alt"></i>
-</p>
-
-
 <i class="fas fa-compress-arrows-alt"></i>
-<i class="fas fa-expand-alt"></i>
 <i class="fas fa-compress-alt"></i>
+
+<div class="all-button">
+    <i class="fas fa-expand-arrows-alt"></i><span>All</span>
+</div>
+
+<div class="vertical-accordion">
+    <ul>
+        {% assign jobs = site.data.resume.work %}
+        {% assign date_format = "%b %Y" %}
+        {% assign item = 1 %}
+
+        {% for job in jobs %}
+
+            {% assign startDate = job.startDate | date: date_format %}
+            {%- if job.endDate -%}
+                {% assign endDate = job.endDate | date: date_format %}
+            {% else %}
+                {% assign endDate = "Present" %}
+            {%- endif -%}
+            {% assign dates = startDate | append: " - " | append: endDate %}
+
+            <li>
+                <input type="checkbox" id="experience-checkbox-{{ item }}" name="experience-checkbox-accordion" />
+                <label for="experience-checkbox-{{ item }}">
+                    <div class="checkbox-label-content">
+                        <i class="fas fa-expand-alt"></i>
+                        <span>
+                            <span>{{ job.position }}&nbsp;&nbsp;&#183;&nbsp;&nbsp;{{ job.company }}</span>
+                            <p class="experience-dates">{{ dates }}</p>
+                        </span>
+                    </div>
+                </label>
+                <div class="accordion-content">
+                    {% for highlight in job.highlights %}
+                        <p>&#183;&nbsp;&nbsp;{{ highlight }}</p>
+                    {% endfor %}
+                </div>
+            </li>
+            {% assign item = item | plus: 1 %}
+
+        {% endfor %}
+    </ul>
+</div>

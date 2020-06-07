@@ -1,4 +1,4 @@
-<div class="footer-col-wrapper">
+<div class="skills-col-wrapper">
 
     {% assign resume_skills = site.data.resume.skills %}
     {% assign resume_skills_size = resume_skills.size %}
@@ -21,11 +21,11 @@
     {%- endif -%}
 
     {% for i in (1..skills_cols) %}
-        <div class="footer-col footer-col-1">
-            <ul class="contact-list">
+        <div class="skills-col">
+            <ul class="skill-list">
                 {%- assign offset = i | minus: 1 | times: col_size -%}
                 {%- for skill in skills offset:offset limit:col_size -%}
-                    <li>&#183; {{ skill | escape }}</li>
+                    <li>{{ skill | escape }}</li>
                 {%- endfor -%}
             </ul>
         </div>
