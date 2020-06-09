@@ -28,6 +28,7 @@
     cursor:pointer;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
+    @include relative-font-size(1.125);
   }
 
   ul li {
@@ -89,7 +90,7 @@
   }
 
   .accordion-content {
-    @include relative-font-size(0.875);
+    //@include relative-font-size(0.875);
     max-height:0;
     margin-left: $base-font-size - 4px + ($spacing-unit/2);
     border-top: 3px solid transparent;

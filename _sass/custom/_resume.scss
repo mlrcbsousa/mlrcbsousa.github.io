@@ -8,6 +8,10 @@
   input, label, div, p {
     box-sizing: border-box;
   }
+
+  input, label, div, p, span {
+    letter-spacing: 0.8px;
+  }
 }
 
 .resume-links {
@@ -77,7 +81,12 @@
   display: inline-block;
   text-align: center;
 
-  @include relative-font-size(1.125);
+  @include relative-font-size(1.25);
+
+  @include media-query($on-palm) {
+    @include relative-font-size(1.125);
+  }
+
   color: $brand-color;
 
   &:hover {
@@ -113,6 +122,7 @@
 }
 
 .all-button {
+  @include relative-font-size(1.125);
   color: $grey-color;
 
   i {
