@@ -104,7 +104,7 @@
     padding: ($base-font-size/4) 0;
 
     ~ .accordion-content {
-      max-height:1300px; // Make this larger then any accordion-content might be to get the transition animation (remember palm)
+      max-height:1700px; // Make this larger then any accordion-content might be to get the transition animation (remember palm)
       border-top: 3px solid $grey-color-light;
       padding: ($base-font-size/2 - 3px) 0; // Minus size of border
     }
