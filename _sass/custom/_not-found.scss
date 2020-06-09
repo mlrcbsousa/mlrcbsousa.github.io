@@ -25,7 +25,7 @@
 
   a {
     &:hover {
-      @include transition(all .3s ease-out);
+      @include transition(all .3s ease-in-out);
       transition-delay: 0.2s;
     }
   }

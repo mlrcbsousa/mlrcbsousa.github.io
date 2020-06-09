@@ -70,7 +70,7 @@
     padding: 0 ($spacing-unit/5);
   }
 
-  @include transition(all .3s ease-out);
+  @include transition(all .3s ease-in-out);
   transition-delay: 0.2s;
 
   // Hover bold that doesn't move the word
@@ -107,7 +107,7 @@
     padding-right: ($spacing-unit/2);
     color: $grey-color-lighter;
 
-    @include transition(color .3s ease-out);
+    @include transition(color .3s ease-in-out);
     transition-delay: 0.1s;
   }
 }

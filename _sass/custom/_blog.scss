@@ -10,7 +10,7 @@
     padding: $spacing-unit 0;
 
     &:hover {
-      @include transition(color .3s ease-out);
+      @include transition(color .3s ease-in-out);
       transition-delay: 0.2s;
     }
 

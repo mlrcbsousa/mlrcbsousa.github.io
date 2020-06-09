@@ -1,0 +1,42 @@
+---
+layout: projects
+title: Projects
+permalink: /projects/
+---
+
+{% if jekyll.environment == "production" %}
+<h1>Under construction ...</h1>
+{% else %}
+
+
+<div class="projects">
+    {% assign projects = site.data.projects %}
+    {% assign item = 1 %}
+
+    {% for project in projects %}
+        <div class="project" id="project-{{ item }}">
+            <a href="{{ project.url }}" target="_blank">
+                <img src="{{ project.img }}" />
+                <div class="project-infos">
+                    <div>
+                        <h2>{{ project.title }}</h2>
+                        <p>
+                            {% for technology in project.stack %}
+                            #{{ technology | escape }}&nbsp;
+                            {% endfor %}
+                        </p>
+                    </div>
+                    <a href="{{ project.github }}"
+                       target="_blank"
+                       class="github-link"
+                       id="project-github-{{ item }}"
+                    ><i class="fa fa-code-fork"></i></a>
+                </div>
+            </a>
+        </div>
+        {% assign item = item | plus: 1 %}
+
+    {% endfor %}
+</div>
+{% endif %}
+

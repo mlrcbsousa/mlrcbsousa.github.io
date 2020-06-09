@@ -1,0 +1,80 @@
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: $base-font-size;
+
+  @include media-query($on-palm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project {
+  overflow: hidden;
+  background: white;
+  border: 1px solid $grey-color-light;
+  border-radius: 3px;
+
+  &:hover {
+    @include transition(all .3s ease-in-out);
+    transition-delay: 0.1s;
+    border: 1px solid lighten($grey-color-light, 5%);
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.15);
+  }
+
+  a > img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  h2 {
+    color: $text-color;
+    font-size: $base-font-size;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  p {
+    color: $grey-color;
+    @include relative-font-size(0.75);
+    opacity: .7;
+    margin: 0;
+  }
+
+  .project-infos {
+
+    padding: $spacing-unit / 2;
+    position: relative;
+
+    .github-link {
+      position: absolute;
+      top: -$base-font-size;
+      right: $base-font-size;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include relative-font-size(1.25);
+      width: ($base-font-size * 2) ;
+      height: ($base-font-size * 2) ;
+      border-radius: $base-font-size ;
+
+      color: $grey-color-lighter;
+      border: 1px solid $grey-color-light;
+      background-color: $background-color;
+
+      i {
+        padding-left: 2px;
+      }
+
+      &:hover {
+        @include transition(all .3s ease-in-out);
+        transition-delay: 0.1s;
+        border: 1px solid $grey-color-lighter;
+        color: $grey-color;
+      }
+    }
+  }
+
+}

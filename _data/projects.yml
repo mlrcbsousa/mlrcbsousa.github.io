@@ -1,11 +1,9 @@
 - stack:
-    - jekyll
-  url: https://www.fcbsousa.com
-  github: https://github.com/mlrcbsousa/fcbsousa
+    - Jekyll
+    - SCSS
+    - Liquid
+  url: https://www.mlrcbsousa.com
+  github: https://github.com/mlrcbsousa/mlrcbsousa.github.io
   gif: animation-gif
-- stack:
-    - jekyll
-    - node
-  url: https://www.fcbsousa.com
-  github: https://github.com/mlrcbsousa/fcbsousa
-  gif: animation-gif
+  img: /images/logo/main.svg
+  title: Personal Website

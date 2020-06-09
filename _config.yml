@@ -13,7 +13,7 @@ google_analytics: UA-129352462-1
 header_pages:
   - resume.html
   - blog/index.html
-  - projects.markdown
+  - projects.html
 skills_column_size: 12
 
 # Pagination

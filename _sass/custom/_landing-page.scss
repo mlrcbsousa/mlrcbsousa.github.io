@@ -60,7 +60,7 @@
     border-bottom: 1.5px solid transparent;
 
     &:hover {
-      @include transition(all .3s ease-out);
+      @include transition(all .3s ease-in-out);
       transition-delay: 0.2s;
       color: $grey-color-dark;
       border-bottom: 1.5px solid $grey-color-dark;
@@ -101,7 +101,7 @@
     color: $grey-color-lighter;
 
     &:hover {
-      @include transition(color .3s ease-out);
+      @include transition(color .3s ease-in-out);
       transition-delay: 0.2s;
       color: $grey-color-dark;
     }

@@ -32,7 +32,7 @@ p, span, a, label {
     text-align: center;
 
     &:hover {
-      @include transition(all .3s ease-out);
+      @include transition(all .3s ease-in-out);
       transition-delay: 0.2s;
       color: $grey-color-dark;
     }
@@ -71,5 +71,6 @@ p, span, a, label {
   "custom/pagination",
   "custom/resume",
   "custom/not-found",
-  "custom/blog"
+  "custom/blog",
+  "custom/projects"
 ;
