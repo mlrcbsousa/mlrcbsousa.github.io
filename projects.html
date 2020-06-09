@@ -4,17 +4,11 @@ title: Projects
 permalink: /projects/
 ---
 
-{% if jekyll.environment == "production" %}
-<h1>Under construction ...</h1>
-{% else %}
-
-
 <div class="projects">
     {% assign projects = site.data.projects %}
-    {% assign item = 1 %}
 
     {% for project in projects %}
-        <div class="project" id="project-{{ item }}">
+        <div class="project">
             <a href="{{ project.url }}" target="_blank">
                 <img src="{{ project.img }}" />
                 <div class="project-infos">
@@ -26,17 +20,10 @@ permalink: /projects/
                             {% endfor %}
                         </p>
                     </div>
-                    <a href="{{ project.github }}"
-                       target="_blank"
-                       class="github-link"
-                       id="project-github-{{ item }}"
-                    ><i class="fa fa-code-fork"></i></a>
+                    <a href="{{ project.github }}" target="_blank" class="github-link"><i class="fa fa-code-fork"></i></a>
                 </div>
             </a>
         </div>
-        {% assign item = item | plus: 1 %}
-
     {% endfor %}
 </div>
-{% endif %}
 

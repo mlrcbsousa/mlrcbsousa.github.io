@@ -67,7 +67,7 @@
 
     @include media-query($on-palm) {
       line-height: 1.5;
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
   }
 
@@ -91,7 +91,7 @@
   .accordion-content {
     @include relative-font-size(0.875);
     max-height:0;
-    margin-left: $base-font-size - 1px + ($spacing-unit/2);
+    margin-left: $base-font-size - 4px + ($spacing-unit/2);
     border-top: 3px solid transparent;
 
     overflow:hidden;
