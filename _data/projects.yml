@@ -1,9 +1,18 @@
 - stack:
+    - Ruby On Rails
+    - Bootstrap
+    - Heroku
+  url: https://airdeskcoffee.herokuapp.com/
+  github: https://github.com/mlrcbsousa/air_desk
+  # gif: animation-gif
+  img: /images/projects/airdnc.png
+  title: LeWagon AirBnB Copy
+- stack:
     - Jekyll
     - SCSS
     - Liquid
   url: https://www.mlrcbsousa.com
   github: https://github.com/mlrcbsousa/mlrcbsousa.github.io
-  gif: animation-gif
+  # gif: animation-gif
   img: /images/logo/main.svg
   title: Personal Website
